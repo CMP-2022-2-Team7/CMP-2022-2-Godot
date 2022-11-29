@@ -1,107 +1,278 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://rectangle.png" type="Texture" id=1]
 [ext_resource path="res://rectangle_icon_144162.png" type="Texture" id=2]
 
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 1, 227.5 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 325, 1 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 1, 123 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 1, 154 )
+
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 200, 1 )
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 1, 73.5 )
+
+[sub_resource type="RectangleShape2D" id=7]
+extents = Vector2( 1, 100 )
+
+[sub_resource type="RectangleShape2D" id=9]
+extents = Vector2( 115, 1 )
+
+[sub_resource type="RectangleShape2D" id=8]
+extents = Vector2( 1, 54 )
+
 [node name="World" type="Node2D"]
-position = Vector2( 331, 294 )
+position = Vector2( 322, 295 )
 scale = Vector2( 1.19342, 1.21813 )
 __meta__ = {
 "_edit_group_": true
 }
 
-[node name="main_key" type="Sprite" parent="."]
-position = Vector2( -3.2189, 230.595 )
-scale = Vector2( 1.08584, 0.621977 )
+[node name="main" type="Node" parent="."]
+
+[node name="main_screen1" type="Polygon2D" parent="main"]
+color = Color( 0.988235, 0.67451, 0.67451, 1 )
+polygon = PoolVector2Array( 0, 0, 0, 455, 650, 455, 650, 0 )
+
+[node name="main_key1" type="Polygon2D" parent="main"]
+color = Color( 0.623529, 0.470588, 0.470588, 1 )
+polygon = PoolVector2Array( 0, 455, 0, 700, 650, 700, 650, 455 )
+
+[node name="main_screen" type="Sprite" parent="main"]
+visible = false
+position = Vector2( 325, 227.5 )
+scale = Vector2( 1.26953, 1.41992 )
 texture = ExtResource( 1 )
 
-[node name="main_screen" type="Sprite" parent="."]
-position = Vector2( -3.75537, -56.7036 )
-scale = Vector2( 1.08584, 1.15121 )
+[node name="main_key" type="Sprite" parent="main"]
+visible = false
+position = Vector2( 325, 578 )
+scale = Vector2( 1.26953, 0.765625 )
 texture = ExtResource( 1 )
 
-[node name="stage1_key" type="Sprite" parent="."]
-position = Vector2( 0.536499, 60.4839 )
-scale = Vector2( 0.549353, 0.319557 )
+[node name="main_screen2" type="StaticBody2D" parent="main"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="main/main_screen2"]
+position = Vector2( 1, 227.5 )
+shape = SubResource( 1 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="main/main_screen2"]
+position = Vector2( 649, 227.5 )
+shape = SubResource( 1 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="main/main_screen2"]
+position = Vector2( 325, 1 )
+shape = SubResource( 3 )
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="main/main_screen2"]
+position = Vector2( 325, 454 )
+shape = SubResource( 3 )
+
+[node name="main_key2" type="StaticBody2D" parent="main"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="main/main_key2"]
+position = Vector2( 1, 577 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="main/main_key2"]
+position = Vector2( 649, 577 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="main/main_key2"]
+position = Vector2( 325, 456 )
+shape = SubResource( 3 )
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="main/main_key2"]
+position = Vector2( 325, 699 )
+shape = SubResource( 3 )
+
+[node name="stage1" type="Node" parent="."]
+
+[node name="stage1_screen1" type="Polygon2D" parent="stage1"]
+color = Color( 0.937255, 0.862745, 0.729412, 1 )
+polygon = PoolVector2Array( 125, 0, 525, 0, 525, 308, 125, 308 )
+
+[node name="stage1_key1" type="Polygon2D" parent="stage1"]
+color = Color( 0.866667, 0.694118, 0.384314, 1 )
+polygon = PoolVector2Array( 125, 455, 525, 455, 525, 308, 125, 308 )
+
+[node name="stage1_screen" type="Sprite" parent="stage1"]
+visible = false
+position = Vector2( 325, 154 )
+scale = Vector2( 0.78125, 0.960938 )
 texture = ExtResource( 1 )
 
-[node name="stage1_screen" type="Sprite" parent="."]
-position = Vector2( 0, -115.297 )
-scale = Vector2( 0.549354, 0.773186 )
+[node name="stage1_key" type="Sprite" parent="stage1"]
+visible = false
+position = Vector2( 324.5, 381.5 )
+scale = Vector2( 0.783203, 0.458984 )
 texture = ExtResource( 1 )
 
-[node name="stage2_key" type="Sprite" parent="."]
-position = Vector2( 2.14594, -36.8574 )
-scale = Vector2( 0.313301, 0.281753 )
+[node name="stage1_screen2" type="StaticBody2D" parent="stage1"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="stage1/stage1_screen2"]
+position = Vector2( 126, 154 )
+shape = SubResource( 4 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="stage1/stage1_screen2"]
+position = Vector2( 524, 154 )
+shape = SubResource( 4 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="stage1/stage1_screen2"]
+position = Vector2( 325, 1 )
+shape = SubResource( 6 )
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="stage1/stage1_screen2"]
+position = Vector2( 325, 307 )
+shape = SubResource( 6 )
+
+[node name="stage1_key2" type="StaticBody2D" parent="stage1"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="stage1/stage1_key2"]
+position = Vector2( 126, 381.5 )
+shape = SubResource( 5 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="stage1/stage1_key2"]
+position = Vector2( 524, 381.5 )
+shape = SubResource( 5 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="stage1/stage1_key2"]
+position = Vector2( 325, 309 )
+shape = SubResource( 6 )
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="stage1/stage1_key2"]
+position = Vector2( 325, 454 )
+shape = SubResource( 6 )
+
+[node name="stage2" type="Node" parent="."]
+
+[node name="stage2_screen1" type="Polygon2D" parent="stage2"]
+color = Color( 0.815686, 0.729412, 0.937255, 1 )
+polygon = PoolVector2Array( 210, 0, 440, 0, 440, 200, 210, 200 )
+
+[node name="stage2_key1" type="Polygon2D" parent="stage2"]
+color = Color( 0.635294, 0.384314, 0.866667, 1 )
+polygon = PoolVector2Array( 210, 200, 440, 200, 440, 308, 210, 308 )
+
+[node name="stage2_screen" type="Sprite" parent="stage2"]
+visible = false
+position = Vector2( 325.5, 99.5 )
+scale = Vector2( 0.447266, 0.626953 )
 texture = ExtResource( 1 )
 
-[node name="stabe2_screen" type="Sprite" parent="."]
-position = Vector2( 1.60944, -154.99 )
-scale = Vector2( 0.313302, 0.508568 )
+[node name="stage2_key" type="Sprite" parent="stage2"]
+visible = false
+position = Vector2( 325, 254.069 )
+scale = Vector2( 0.449219, 0.339575 )
 texture = ExtResource( 1 )
+
+[node name="stage2_screen2" type="StaticBody2D" parent="stage2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="stage2/stage2_screen2"]
+position = Vector2( 211, 100 )
+shape = SubResource( 7 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="stage2/stage2_screen2"]
+position = Vector2( 439, 100 )
+shape = SubResource( 7 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="stage2/stage2_screen2"]
+position = Vector2( 325, 1 )
+shape = SubResource( 9 )
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="stage2/stage2_screen2"]
+position = Vector2( 325, 199 )
+shape = SubResource( 9 )
+
+[node name="stage2_key2" type="StaticBody2D" parent="stage2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="stage2/stage2_key2"]
+position = Vector2( 211, 254 )
+shape = SubResource( 8 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="stage2/stage2_key2"]
+position = Vector2( 439, 254 )
+shape = SubResource( 8 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="stage2/stage2_key2"]
+position = Vector2( 325, 201 )
+shape = SubResource( 9 )
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="stage2/stage2_key2"]
+position = Vector2( 325, 307 )
+shape = SubResource( 9 )
 
 [node name="main_direction" type="Node" parent="."]
 
 [node name="left" type="Sprite" parent="main_direction"]
-position = Vector2( 221.2, 604.44 )
+position = Vector2( 217.2, 613.44 )
 scale = Vector2( 0.2, 0.24 )
 texture = ExtResource( 2 )
 
 [node name="up" type="Sprite" parent="main_direction"]
-position = Vector2( 332.2, 517.44 )
+position = Vector2( 328.2, 526.44 )
 scale = Vector2( 0.200001, 0.239999 )
 texture = ExtResource( 2 )
 
 [node name="down" type="Sprite" parent="main_direction"]
-position = Vector2( 333.2, 604.44 )
+position = Vector2( 329.2, 613.44 )
 scale = Vector2( 0.2, 0.24 )
 texture = ExtResource( 2 )
 
 [node name="right" type="Sprite" parent="main_direction"]
-position = Vector2( 445.2, 604.44 )
+position = Vector2( 441.2, 613.44 )
 scale = Vector2( 0.2, 0.24 )
 texture = ExtResource( 2 )
 
 [node name="stage1_direction" type="Node" parent="."]
 
 [node name="left" type="Sprite" parent="stage1_direction"]
-position = Vector2( 270.6, 393.16 )
+position = Vector2( 272.6, 400.16 )
 scale = Vector2( 0.1, 0.12 )
 texture = ExtResource( 2 )
 
 [node name="up" type="Sprite" parent="stage1_direction"]
-position = Vector2( 325.8, 346.72 )
+position = Vector2( 327.8, 353.72 )
 scale = Vector2( 0.1, 0.12 )
 texture = ExtResource( 2 )
 
 [node name="down" type="Sprite" parent="stage1_direction"]
-position = Vector2( 326.8, 393.16 )
+position = Vector2( 328.8, 400.16 )
 scale = Vector2( 0.1, 0.12 )
 texture = ExtResource( 2 )
 
 [node name="right" type="Sprite" parent="stage1_direction"]
-position = Vector2( 384.6, 393.16 )
+position = Vector2( 386.6, 400.16 )
 scale = Vector2( 0.1, 0.12 )
 texture = ExtResource( 2 )
 
-[node name="stage2_direction" type="Node" parent="stage1_direction"]
+[node name="stage2_direction" type="Node" parent="."]
 
-[node name="left" type="Sprite" parent="stage1_direction/stage2_direction"]
-position = Vector2( 299.8, 269.8 )
+[node name="left" type="Sprite" parent="stage2_direction"]
+position = Vector2( 292.8, 265.8 )
 scale = Vector2( 0.05, 0.06 )
 texture = ExtResource( 2 )
 
-[node name="up" type="Sprite" parent="stage1_direction/stage2_direction"]
-position = Vector2( 329, 245.36 )
+[node name="up" type="Sprite" parent="stage2_direction"]
+position = Vector2( 322, 241.36 )
 scale = Vector2( 0.05, 0.06 )
 texture = ExtResource( 2 )
 
-[node name="down" type="Sprite" parent="stage1_direction/stage2_direction"]
-position = Vector2( 330, 269.8 )
+[node name="down" type="Sprite" parent="stage2_direction"]
+position = Vector2( 323, 265.8 )
 scale = Vector2( 0.05, 0.06 )
 texture = ExtResource( 2 )
 
-[node name="right" type="Sprite" parent="stage1_direction/stage2_direction"]
-position = Vector2( 362.8, 269.8 )
+[node name="right" type="Sprite" parent="stage2_direction"]
+position = Vector2( 355.8, 265.8 )
 scale = Vector2( 0.05, 0.06 )
 texture = ExtResource( 2 )
