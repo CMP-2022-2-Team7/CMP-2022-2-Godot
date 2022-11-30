@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://Player.gd" type="Script" id=1]
 [ext_resource path="res://art/Player/bluefront.png" type="Texture" id=2]
@@ -14,6 +14,7 @@
 [ext_resource path="res://art/Player/blueleftwalk2.png" type="Texture" id=12]
 [ext_resource path="res://art/Player/blueleft.png" type="Texture" id=13]
 [ext_resource path="res://art/Player/bluebackwalk2.png" type="Texture" id=14]
+[ext_resource path="res://Camera2D.gd" type="Script" id=15]
 
 [sub_resource type="CapsuleShape2D" id=1]
 
@@ -53,3 +54,9 @@ shape = SubResource( 1 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="KinematicBody2D"]
 frames = SubResource( 2 )
 animation = "back"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+current = true
+smoothing_enabled = true
+smoothing_speed = 10.0
+script = ExtResource( 15 )
