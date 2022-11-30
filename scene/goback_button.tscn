@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://theme/menu_button.tres" type="DynamicFont" id=1]
+[ext_resource path="res://theme/non_selected_button_theme.tres" type="StyleBox" id=2]
+[ext_resource path="res://menu_button.gd" type="Script" id=3]
+[ext_resource path="res://theme/selected_button_theme.tres" type="StyleBox" id=4]
+
+[node name="Button" type="Button"]
+margin_left = 2.0
+margin_top = 2.0
+margin_right = 58.0
+margin_bottom = 18.0
+rect_scale = Vector2( 1.77266, 1.77 )
+custom_fonts/font = ExtResource( 1 )
+custom_styles/pressed = ExtResource( 4 )
+custom_styles/focus = ExtResource( 4 )
+custom_styles/normal = ExtResource( 2 )
+text = "Back"
+script = ExtResource( 3 )
+reference_path = "res://scene/Lobby.tscn"
+start_focused = true
