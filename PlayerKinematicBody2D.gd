@@ -35,3 +35,5 @@ func _process(_delta):
 		animation.play("back")
 	elif Input.is_action_pressed("down"):
 		animation.play("down")
+	else:
+		animation.stop()
