@@ -1,7 +1,8 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://rectangle.png" type="Texture" id=1]
-[ext_resource path="res://rectangle_icon_144162.png" type="Texture" id=2]
+[ext_resource path="res://Player.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Key.tscn" type="PackedScene" id=5]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 1, 227.5 )
@@ -31,7 +32,7 @@ extents = Vector2( 115, 1 )
 extents = Vector2( 1, 54 )
 
 [node name="World" type="Node2D"]
-position = Vector2( 322, 295 )
+position = Vector2( 316, 293 )
 scale = Vector2( 1.19342, 1.21813 )
 __meta__ = {
 "_edit_group_": true
@@ -213,66 +214,30 @@ shape = SubResource( 9 )
 
 [node name="main_direction" type="Node" parent="."]
 
-[node name="left" type="Sprite" parent="main_direction"]
-position = Vector2( 217.2, 613.44 )
-scale = Vector2( 0.2, 0.24 )
-texture = ExtResource( 2 )
-
-[node name="up" type="Sprite" parent="main_direction"]
-position = Vector2( 328.2, 526.44 )
-scale = Vector2( 0.200001, 0.239999 )
-texture = ExtResource( 2 )
-
-[node name="down" type="Sprite" parent="main_direction"]
-position = Vector2( 329.2, 613.44 )
-scale = Vector2( 0.2, 0.24 )
-texture = ExtResource( 2 )
-
-[node name="right" type="Sprite" parent="main_direction"]
-position = Vector2( 441.2, 613.44 )
-scale = Vector2( 0.2, 0.24 )
-texture = ExtResource( 2 )
+[node name="Key" parent="main_direction" instance=ExtResource( 5 )]
 
 [node name="stage1_direction" type="Node" parent="."]
 
-[node name="left" type="Sprite" parent="stage1_direction"]
-position = Vector2( 272.6, 400.16 )
-scale = Vector2( 0.1, 0.12 )
-texture = ExtResource( 2 )
-
-[node name="up" type="Sprite" parent="stage1_direction"]
-position = Vector2( 327.8, 353.72 )
-scale = Vector2( 0.1, 0.12 )
-texture = ExtResource( 2 )
-
-[node name="down" type="Sprite" parent="stage1_direction"]
-position = Vector2( 328.8, 400.16 )
-scale = Vector2( 0.1, 0.12 )
-texture = ExtResource( 2 )
-
-[node name="right" type="Sprite" parent="stage1_direction"]
-position = Vector2( 386.6, 400.16 )
-scale = Vector2( 0.1, 0.12 )
-texture = ExtResource( 2 )
+[node name="Key" parent="stage1_direction" instance=ExtResource( 5 )]
+position = Vector2( 163, 79 )
+scale = Vector2( 0.503347, 0.521615 )
 
 [node name="stage2_direction" type="Node" parent="."]
 
-[node name="left" type="Sprite" parent="stage2_direction"]
-position = Vector2( 292.8, 265.8 )
-scale = Vector2( 0.05, 0.06 )
-texture = ExtResource( 2 )
+[node name="Key" parent="stage2_direction" instance=ExtResource( 5 )]
+position = Vector2( 242, 106 )
+scale = Vector2( 0.260101, 0.260394 )
 
-[node name="up" type="Sprite" parent="stage2_direction"]
-position = Vector2( 322, 241.36 )
-scale = Vector2( 0.05, 0.06 )
-texture = ExtResource( 2 )
+[node name="Node" type="Node" parent="."]
 
-[node name="down" type="Sprite" parent="stage2_direction"]
-position = Vector2( 323, 265.8 )
-scale = Vector2( 0.05, 0.06 )
-texture = ExtResource( 2 )
+[node name="Player" parent="Node" instance=ExtResource( 3 )]
+position = Vector2( 114, 514 )
+scale = Vector2( 1.19342, 1.21813 )
 
-[node name="right" type="Sprite" parent="stage2_direction"]
-position = Vector2( 355.8, 265.8 )
-scale = Vector2( 0.05, 0.06 )
-texture = ExtResource( 2 )
+[node name="Player2" parent="Node" instance=ExtResource( 3 )]
+visible = false
+position = Vector2( 191, 368 )
+
+[node name="Player3" parent="Node" instance=ExtResource( 3 )]
+visible = false
+position = Vector2( 317, 102 )
