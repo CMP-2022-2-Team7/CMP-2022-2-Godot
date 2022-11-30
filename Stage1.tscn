@@ -1,12 +1,20 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Player.tscn" type="PackedScene" id=1]
-[ext_resource path="res://maze.tscn" type="PackedScene" id=2]
+[ext_resource path="res://maze_fix.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Camera2D.gd" type="Script" id=3]
 
 [node name="stage1" type="Node2D"]
 
-[node name="Node2D" parent="." instance=ExtResource( 2 )]
-
 [node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 25, 88 )
-scale = Vector2( 0.3, 0.3 )
+position = Vector2( 136, 73 )
+scale = Vector2( 0.70505, 0.70505 )
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+scale = Vector2( 0.01, 0.01 )
+current = true
+zoom = Vector2( 0.15, 0.15 )
+smoothing_enabled = true
+script = ExtResource( 3 )
+
+[node name="Node2D" parent="." instance=ExtResource( 2 )]
