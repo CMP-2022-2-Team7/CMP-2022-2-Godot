@@ -9,7 +9,7 @@ extends Node2D
 # Called when the node enters the scene tree for the first time
 # Same as setup() in Processing
 func _ready():
-	print("Player spawned!")
+	print("Hello Godot!")
 	pass # Replace with function body.
 
 
