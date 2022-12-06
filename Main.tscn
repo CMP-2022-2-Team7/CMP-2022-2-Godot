@@ -1,9 +1,14 @@
 [gd_scene load_steps=48 format=2]
 
+<<<<<<< HEAD
 [ext_resource path="res://art/hole.png" type="Texture" id=1]
 [ext_resource path="res://art/Player/bluefront.png" type="Texture" id=2]
 [ext_resource path="res://art/Keyboard/keyboard_73.png" type="Texture" id=3]
 [ext_resource path="res://art/Player/bluebackwalk1.png" type="Texture" id=4]
+=======
+[ext_resource path="res://rectangle.png" type="Texture" id=1]
+[ext_resource path="res://object/Player.tscn" type="PackedScene" id=3]
+>>>>>>> 75cd5b9 (feat : Add Enemy scene in project)
 [ext_resource path="res://Key.tscn" type="PackedScene" id=5]
 [ext_resource path="res://art/Player/blueright.png" type="Texture" id=6]
 [ext_resource path="res://art/Player/bluedown2.png" type="Texture" id=7]
