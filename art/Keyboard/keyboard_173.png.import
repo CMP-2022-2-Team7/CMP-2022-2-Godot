@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/rectangle.png-8630e31c2aaa3e397471e1a07e51a6b1.stex"
+path="res://.import/keyboard_173.png-548d7c9bd015d70a8f37452fe08d0396.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://rectangle.png"
-dest_files=[ "res://.import/rectangle.png-8630e31c2aaa3e397471e1a07e51a6b1.stex" ]
+source_file="res://art/Keyboard/keyboard_173.png"
+dest_files=[ "res://.import/keyboard_173.png-548d7c9bd015d70a8f37452fe08d0396.stex" ]
 
 [params]
 
