@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/settings.png-bec15f70687107c5f26c4923731e87c7.stex"
+path="res://.import/ghost_back3.png-6bc77544847d249a6624db8c703e340a.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/settings.png"
-dest_files=[ "res://.import/settings.png-bec15f70687107c5f26c4923731e87c7.stex" ]
+source_file="res://art/Enemy/ghost_back3.png"
+dest_files=[ "res://.import/ghost_back3.png-6bc77544847d249a6624db8c703e340a.stex" ]
 
 [params]
 
