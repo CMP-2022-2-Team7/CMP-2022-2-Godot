@@ -1,15 +1,13 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://menu_button.tscn" type="PackedScene" id=1]
-[ext_resource path="res://art/background/Lobbybackground2.png" type="Texture" id=2]
+[ext_resource path="res://scene/background.tscn" type="PackedScene" id=2]
 [ext_resource path="res://theme/Title.tres" type="DynamicFont" id=3]
+[ext_resource path="res://scene/lobbyBgm.tscn" type="PackedScene" id=4]
 
 [node name="Lobby" type="Node2D"]
 
-[node name="background" type="Sprite" parent="."]
-position = Vector2( 324, 349.5 )
-scale = Vector2( 1.00308, 1.11058 )
-texture = ExtResource( 2 )
+[node name="background" parent="." instance=ExtResource( 2 )]
 
 [node name="mnuStart" parent="." instance=ExtResource( 1 )]
 margin_left = 256.0
@@ -51,3 +49,5 @@ margin_bottom = 267.0
 custom_fonts/font = ExtResource( 3 )
 text = "Dream In 
        Dream In"
+
+[node name="AudioStreamPlayer" parent="." instance=ExtResource( 4 )]
