@@ -1,6 +1,6 @@
 extends KinematicBody2D
 
-export (int) var speed = 50
+export (int) var speed = 70
 var velocity = Vector2()
 var move_left = false
 var move_right = false
@@ -9,7 +9,7 @@ var move_down = false
 
 func _on_left_key_body_entered(body):
 	move_left = true
-	
+
 func _on_left_key_body_exited(body):
 	move_left = false
 
@@ -35,24 +35,24 @@ func get_input():
 	velocity = Vector2()
 	if move_left == true:
 		velocity.x -= 1
-		get_node("/root/World/main_direction/left_key_active").show()
+		get_node("/root/World/stage1_direction/left_key_active").show()
 	if move_left == false:
-		get_node("/root/World/main_direction/left_key_active").hide()
+		get_node("/root/World/stage1_direction/left_key_active").hide()
 	if move_right == true:
 		velocity.x += 1
-		get_node("/root/World/main_direction/right_key_active").show()
+		get_node("/root/World/stage1_direction/right_key_active").show()
 	if move_right == false:
-		get_node("/root/World/main_direction/right_key_active").hide()
+		get_node("/root/World/stage1_direction/right_key_active").hide()
 	if move_up == true:
 		velocity.y -= 1
-		get_node("/root/World/main_direction/up_key_active").show()
+		get_node("/root/World/stage1_direction/up_key_active").show()
 	if move_up == false:
-		get_node("/root/World/main_direction/up_key_active").hide()
+		get_node("/root/World/stage1_direction/up_key_active").hide()
 	if move_down == true:
 		velocity.y += 1
-		get_node("/root/World/main_direction/down_key_active").show()
+		get_node("/root/World/stage1_direction/down_key_active").show()
 	if move_down == false:
-		get_node("/root/World/main_direction/down_key_active").hide()
+		get_node("/root/World/stage1_direction/down_key_active").hide()
 	velocity = velocity.normalized() * speed
 
 func _physics_process(delta):
