@@ -45,7 +45,7 @@ frames = SubResource( 1 )
 animation = "back"
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-polygon = PoolVector2Array( 1, -18, -8, -9, -8, 1, -9, 12, -3, 21, 3, 24, 9, 20, 13, 5, 13, -8, 10, -16 )
+polygon = PoolVector2Array( -10, 6.66667, -3, 21, 3, 24, 9, 20, 13, 5 )
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 1 )
