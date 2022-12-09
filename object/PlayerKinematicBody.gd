@@ -1,6 +1,6 @@
 extends KinematicBody2D
 
-export (int) var speed = 150
+export (int) var speed = 100
 var velocity = Vector2()
 
 func get_input():
@@ -22,7 +22,7 @@ func _physics_process(delta):
 	velocity = move_and_slide(velocity)
 
 # get a reference to the sprite at the beginning (instead of using _ready())
-onready var animation = $AnimatedSprite
+onready var animation = $PlayerAnimatedSprite
 
 func _process(_delta):
 	if Input.is_action_pressed("right"):

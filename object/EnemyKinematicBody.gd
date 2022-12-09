@@ -3,6 +3,7 @@ extends KinematicBody2D
 export (int) var speed = 150
 var velocity = Vector2()
 
+"""
 func get_input():
 	# Set velocity based on the keys pressed
 	velocity = Vector2()
@@ -17,10 +18,11 @@ func get_input():
 	# Use normalized vection so that velocity is calculated based on speed
 	velocity = velocity.normalized() * speed
 
+
 func _physics_process(delta):
 	get_input()
 	velocity = move_and_slide(velocity)
-
+"""
 # get a reference to the sprite at the beginning (instead of using _ready())
 onready var animation = $AnimatedSprite
 
