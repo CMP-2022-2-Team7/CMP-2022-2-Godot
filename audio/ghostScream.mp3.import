@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/ghostScream.mp3-20b8774d5e2f7acc6335d600784ea1bb.mp3str"
+
+[deps]
+
+source_file="res://audio/ghostScream.mp3"
+dest_files=[ "res://.import/ghostScream.mp3-20b8774d5e2f7acc6335d600784ea1bb.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
