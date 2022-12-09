@@ -1,14 +1,9 @@
 [gd_scene load_steps=48 format=2]
 
-<<<<<<< HEAD
 [ext_resource path="res://art/hole.png" type="Texture" id=1]
 [ext_resource path="res://art/Player/bluefront.png" type="Texture" id=2]
 [ext_resource path="res://art/Keyboard/keyboard_73.png" type="Texture" id=3]
 [ext_resource path="res://art/Player/bluebackwalk1.png" type="Texture" id=4]
-=======
-[ext_resource path="res://rectangle.png" type="Texture" id=1]
-[ext_resource path="res://object/Player.tscn" type="PackedScene" id=3]
->>>>>>> 75cd5b9 (feat : Add Enemy scene in project)
 [ext_resource path="res://Key.tscn" type="PackedScene" id=5]
 [ext_resource path="res://art/Player/blueright.png" type="Texture" id=6]
 [ext_resource path="res://art/Player/bluedown2.png" type="Texture" id=7]
@@ -22,7 +17,7 @@
 [ext_resource path="res://art/Player/bluerightwalk1.png" type="Texture" id=15]
 [ext_resource path="res://stage1_player.gd" type="Script" id=16]
 [ext_resource path="res://stage2_player.gd" type="Script" id=17]
-[ext_resource path="res://PlayerKinematicBody2D.gd" type="Script" id=18]
+[ext_resource path="res://object/PlayerKinematicBody.gd" type="Script" id=18]
 [ext_resource path="res://art/Keyboard/keyboard_174.png" type="Texture" id=19]
 [ext_resource path="res://art/Keyboard/keyboard_72.png" type="Texture" id=20]
 [ext_resource path="res://art/main_background.png" type="Texture" id=21]
@@ -322,7 +317,6 @@ texture = ExtResource( 3 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="main_direction/left_key"]
 position = Vector2( 216.667, 613.889 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 18 )
 
 [node name="right_key" type="Area2D" parent="main_direction"]
@@ -336,7 +330,6 @@ texture = ExtResource( 20 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="main_direction/right_key"]
 position = Vector2( 441.25, 612.963 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 13 )
 
 [node name="up_key" type="Area2D" parent="main_direction"]
@@ -350,7 +343,6 @@ texture = ExtResource( 23 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="main_direction/up_key"]
 position = Vector2( 328, 525.926 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 14 )
 
 [node name="down_key" type="Area2D" parent="main_direction"]
@@ -364,7 +356,6 @@ texture = ExtResource( 22 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="main_direction/down_key"]
 position = Vector2( 329, 612.963 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 15 )
 
 [node name="left_key_active" type="Sprite" parent="main_direction"]
@@ -404,7 +395,6 @@ texture = ExtResource( 3 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="stage1_direction/left_key"]
 position = Vector2( 217, 612.963 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 12 )
 
 [node name="right_key" type="Area2D" parent="stage1_direction"]
@@ -498,7 +488,7 @@ position = Vector2( 92, 556 )
 scale = Vector2( 2.5, 2.5 )
 script = ExtResource( 18 )
 
-[node name="AnimatedSprite" type="AnimatedSprite" parent="Player/main_player"]
+[node name="PlayerAnimatedSprite" type="AnimatedSprite" parent="Player/main_player"]
 frames = SubResource( 16 )
 animation = "back"
 
@@ -512,7 +502,7 @@ position = Vector2( 223, 365 )
 scale = Vector2( 1.2, 1.2 )
 script = ExtResource( 16 )
 
-[node name="AnimatedSprite" type="AnimatedSprite" parent="Player/stage1_player"]
+[node name="PlayerAnimatedSprite" type="AnimatedSprite" parent="Player/stage1_player"]
 frames = SubResource( 10 )
 animation = "back"
 
@@ -526,7 +516,7 @@ position = Vector2( 324, 109 )
 scale = Vector2( 0.8, 0.8 )
 script = ExtResource( 17 )
 
-[node name="AnimatedSprite" type="AnimatedSprite" parent="Player/stage2_player"]
+[node name="PlayerAnimatedSprite" type="AnimatedSprite" parent="Player/stage2_player"]
 frames = SubResource( 10 )
 animation = "back"
 

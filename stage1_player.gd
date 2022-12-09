@@ -59,7 +59,7 @@ func _physics_process(delta):
 	get_input()
 	velocity = move_and_slide(velocity)
 
-onready var animation = $AnimatedSprite
+onready var animation = $PlayerAnimatedSprite
 
 func _process(delta):
 	if move_left == true:
