@@ -1,30 +1,34 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://menu_button.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scene/menu_button.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scene/background.tscn" type="PackedScene" id=2]
-[ext_resource path="res://theme/Title.tres" type="DynamicFont" id=3]
+[ext_resource path="res://font/Undead-PYdr.ttf" type="DynamicFontData" id=3]
 [ext_resource path="res://scene/lobbyBgm.tscn" type="PackedScene" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+size = 92
+font_data = ExtResource( 3 )
 
 [node name="Lobby" type="Node2D"]
 
 [node name="background" parent="." instance=ExtResource( 2 )]
 
 [node name="mnuStart" parent="." instance=ExtResource( 1 )]
-margin_left = 256.0
-margin_top = 336.0
-margin_right = 326.0
-margin_bottom = 356.0
+margin_left = 259.0
+margin_top = 369.0
+margin_right = 329.0
+margin_bottom = 389.0
 focus_neighbour_top = NodePath("../mnuCredit")
 focus_neighbour_bottom = NodePath("../mnuOptions")
 text = "start"
-reference_path = "res://Main.tscn"
+reference_path = "res://scene/gameover.tscn"
 start_focused = true
 
 [node name="mnuOptions" parent="." instance=ExtResource( 1 )]
-margin_left = 256.0
-margin_top = 400.0
-margin_right = 326.0
-margin_bottom = 420.0
+margin_left = 259.0
+margin_top = 433.0
+margin_right = 329.0
+margin_bottom = 453.0
 rect_scale = Vector2( 1.76832, 1.77346 )
 focus_neighbour_top = NodePath("../mnuStart")
 focus_neighbour_bottom = NodePath("../mnuCredit")
@@ -32,21 +36,21 @@ text = "options"
 reference_path = "res://scene/optionsScene.tscn"
 
 [node name="mnuCredit" parent="." instance=ExtResource( 1 )]
-margin_left = 256.0
-margin_top = 464.0
-margin_right = 326.0
-margin_bottom = 484.0
+margin_left = 259.0
+margin_top = 497.0
+margin_right = 329.0
+margin_bottom = 517.0
 focus_neighbour_top = NodePath("../mnuOptions")
 focus_neighbour_bottom = NodePath("../mnuStart")
 text = "credit"
 reference_path = "res://scene/creditScene.tscn"
 
 [node name="Label" type="Label" parent="."]
-margin_left = 56.0
+margin_left = 67.0
 margin_top = 120.0
-margin_right = 596.0
-margin_bottom = 267.0
-custom_fonts/font = ExtResource( 3 )
+margin_right = 607.0
+margin_bottom = 307.0
+custom_fonts/font = SubResource( 1 )
 text = "Dream In 
        Dream In"
 

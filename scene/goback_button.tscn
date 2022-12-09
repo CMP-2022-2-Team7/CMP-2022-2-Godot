@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://theme/menu_button.tres" type="DynamicFont" id=1]
 [ext_resource path="res://theme/non_selected_button_theme.tres" type="StyleBox" id=2]
-[ext_resource path="res://menu_button.gd" type="Script" id=3]
+[ext_resource path="res://script/menu_button.gd" type="Script" id=3]
 [ext_resource path="res://theme/selected_button_theme.tres" type="StyleBox" id=4]
+[ext_resource path="res://audio/click.mp3" type="AudioStream" id=6]
 
 [node name="Button" type="Button"]
 margin_left = 2.0
@@ -19,3 +20,6 @@ text = "Back"
 script = ExtResource( 3 )
 reference_path = "res://scene/Lobby.tscn"
 start_focused = true
+
+[node name="click" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 6 )

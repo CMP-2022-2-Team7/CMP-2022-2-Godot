@@ -12,9 +12,14 @@ func _ready():
 	
 func _on_Button_mouse_entered():
 	grab_focus()
-	
+	$click.play()
+
 func _on_Button_Pressed():
 	if(reference_path != ""):
 		get_tree().change_scene(reference_path)
 	else:
 		get_tree().quit()
+
+
+func _on_Button_focus_entered():
+	$click.play()
