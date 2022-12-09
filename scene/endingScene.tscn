@@ -1,11 +1,11 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://art/background/endingbackground.png" type="Texture" id=1]
 [ext_resource path="res://scene/goback_button.tscn" type="PackedScene" id=2]
 [ext_resource path="res://font/NeoDunggeunmoPro-Regular.ttf" type="DynamicFontData" id=3]
 [ext_resource path="res://theme/next_selected.tres" type="StyleBox" id=4]
 [ext_resource path="res://theme/next_non_selected.tres" type="StyleBox" id=5]
-[ext_resource path="res://scene/Button2.gd" type="Script" id=6]
+[ext_resource path="res://script/Button2.gd" type="Script" id=6]
 [ext_resource path="res://art/resource/man2.png" type="Texture" id=7]
 [ext_resource path="res://art/resource/UI_borders_middle.png" type="Texture" id=8]
 [ext_resource path="res://art/resource/UI_borders_left.png" type="Texture" id=9]
@@ -13,6 +13,7 @@
 [ext_resource path="res://art/resource/UI_borders_middle_b.png" type="Texture" id=11]
 [ext_resource path="res://art/resource/UI_borders_left_b.png" type="Texture" id=12]
 [ext_resource path="res://art/resource/UI_borders_right_b.png" type="Texture" id=13]
+[ext_resource path="res://audio/click.mp3" type="AudioStream" id=14]
 
 [sub_resource type="DynamicFont" id=1]
 font_data = ExtResource( 3 )
@@ -59,6 +60,9 @@ custom_styles/focus = ExtResource( 4 )
 custom_styles/normal = ExtResource( 5 )
 text = "next"
 script = ExtResource( 6 )
+
+[node name="click" type="AudioStreamPlayer" parent="Button2"]
+stream = ExtResource( 14 )
 
 [node name="text1" type="Label" parent="."]
 visible = false

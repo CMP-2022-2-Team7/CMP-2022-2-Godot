@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://theme/selected_button_theme.tres" type="StyleBox" id=1]
 [ext_resource path="res://theme/non_selected_button_theme.tres" type="StyleBox" id=2]
-[ext_resource path="res://menu_button.gd" type="Script" id=3]
+[ext_resource path="res://script/menu_button.gd" type="Script" id=3]
 [ext_resource path="res://theme/menu_button.tres" type="DynamicFont" id=4]
+[ext_resource path="res://audio/click.mp3" type="AudioStream" id=5]
 
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 1, 0.360784, 0.360784, 1 )
@@ -32,3 +33,9 @@ custom_styles/pressed = ExtResource( 1 )
 custom_styles/focus = ExtResource( 1 )
 custom_styles/normal = ExtResource( 2 )
 script = ExtResource( 3 )
+
+[node name="click" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+
+[connection signal="focus_entered" from="." to="." method="_on_Button_focus_entered"]
+[connection signal="pressed" from="." to="." method="_on_Button_pressed"]

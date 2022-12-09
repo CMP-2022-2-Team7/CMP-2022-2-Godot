@@ -14,6 +14,8 @@ func _ready():
 	
 func _on_Button_mouse_entered():
 	grab_focus()
+	$click.play()
+	
 	
 func _on_Button_Pressed():
 	if(text1 == false):
@@ -27,4 +29,5 @@ func _on_Button_Pressed():
 		text3 = true
 		get_node("/root/endingScene/text2").hide()
 		get_node("/root/endingScene/text3").show()
+		get_node("/root/endingScene/Button").show()
 	
