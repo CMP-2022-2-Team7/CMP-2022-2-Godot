@@ -403,7 +403,7 @@ scale = Vector2( 0.330189, 0.330189 )
 texture = ExtResource( 20 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="entry/entrance2"]
-position = Vector2( 394, 42 )
+position = Vector2( 394, 44 )
 rotation = -1.56257
 shape = SubResource( 12 )
 
