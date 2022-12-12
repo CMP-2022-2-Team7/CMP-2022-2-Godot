@@ -21,7 +21,7 @@ margin_bottom = 389.0
 focus_neighbour_top = NodePath("../mnuCredit")
 focus_neighbour_bottom = NodePath("../mnuOptions")
 text = "start"
-reference_path = "res://scene/gameover.tscn"
+reference_path = "res://scene/Main.tscn"
 start_focused = true
 
 [node name="mnuOptions" parent="." instance=ExtResource( 1 )]

@@ -1,20 +1,33 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://scene/background.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scene/goback_button.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scene/lobbyBgm.tscn" type="PackedScene" id=3]
 [ext_resource path="res://art/resource/sound.png" type="Texture" id=4]
 [ext_resource path="res://script/volume.gd" type="Script" id=5]
+[ext_resource path="res://art/resource/UI_borders_left.png" type="Texture" id=6]
+[ext_resource path="res://art/resource/UI_borders_right.png" type="Texture" id=7]
+[ext_resource path="res://art/resource/UI_borders_middle_b.png" type="Texture" id=8]
+[ext_resource path="res://art/resource/UI_borders_left_b.png" type="Texture" id=9]
+[ext_resource path="res://art/resource/UI_borders_right_b.png" type="Texture" id=10]
+[ext_resource path="res://art/resource/UI_borders_middle.png" type="Texture" id=11]
 
 [node name="optionsScene" type="Node2D"]
+position = Vector2( 0, -2 )
 
 [node name="background" parent="." instance=ExtResource( 1 )]
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="Polygon2D" type="Polygon2D" parent="."]
 position = Vector2( 78, 192 )
 scale = Vector2( 1.90625, 1.25 )
 color = Color( 0.180392, 0.180392, 0.180392, 0.627451 )
 polygon = PoolVector2Array( 256, 0, 256, 256, 128.789, 256, 0, 256, 0, 0, 130.498, 0 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="Button" parent="." instance=ExtResource( 2 )]
 margin_left = 16.0
@@ -38,5 +51,47 @@ margin_bottom = 289.0
 max_value = 1.0
 step = 0.05
 script = ExtResource( 5 )
+
+[node name="re" type="Node" parent="."]
+
+[node name="border1" type="Sprite" parent="re"]
+position = Vector2( 85, 200 )
+scale = Vector2( 1.01334, 1.08806 )
+texture = ExtResource( 6 )
+
+[node name="border2" type="Sprite" parent="re"]
+position = Vector2( 322, 193 )
+scale = Vector2( 8.90373, -0.913409 )
+texture = ExtResource( 11 )
+
+[node name="border3" type="Sprite" parent="re"]
+position = Vector2( 559, 198 )
+scale = Vector2( 1.05488, 1.05488 )
+texture = ExtResource( 7 )
+
+[node name="border4" type="Sprite" parent="re"]
+position = Vector2( 79, 360 )
+scale = Vector2( 0.985271, 6.3571 )
+texture = ExtResource( 8 )
+
+[node name="border5" type="Sprite" parent="re"]
+position = Vector2( 85, 505 )
+scale = Vector2( 0.97151, 0.97151 )
+texture = ExtResource( 9 )
+
+[node name="border6" type="Sprite" parent="re"]
+position = Vector2( 326, 511 )
+scale = Vector2( 8.91068, 0.97323 )
+texture = ExtResource( 11 )
+
+[node name="border7" type="Sprite" parent="re"]
+position = Vector2( 562, 507 )
+scale = Vector2( 0.838689, 0.838689 )
+texture = ExtResource( 10 )
+
+[node name="border8" type="Sprite" parent="re"]
+position = Vector2( 566, 353 )
+scale = Vector2( 0.721633, 6.08447 )
+texture = ExtResource( 8 )
 
 [connection signal="value_changed" from="volume" to="volume" method="_on_volume_value_changed"]

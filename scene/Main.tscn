@@ -1,4 +1,4 @@
-[gd_scene load_steps=48 format=2]
+[gd_scene load_steps=49 format=2]
 
 [ext_resource path="res://script/main_player.gd" type="Script" id=1]
 [ext_resource path="res://script/stage2_player.gd" type="Script" id=2]
@@ -28,6 +28,7 @@
 [ext_resource path="res://art/Keyboard/keyboard_70.png" type="Texture" id=26]
 [ext_resource path="res://art/main_background.png" type="Texture" id=27]
 [ext_resource path="res://art/Keyboard/keyboard_174.png" type="Texture" id=28]
+[ext_resource path="res://audio/main.mp3" type="AudioStream" id=29]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 1, 227.5 )
@@ -526,6 +527,10 @@ animation = "back"
 position = Vector2( -0.75, 0.25 )
 scale = Vector2( 1, 1.5 )
 shape = SubResource( 11 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 29 )
+autoplay = true
 
 [connection signal="body_entered" from="main_direction/left_key" to="Player/stage1_player" method="_on_left_key_body_entered"]
 [connection signal="body_exited" from="main_direction/left_key" to="Player/stage1_player" method="_on_left_key_body_exited"]
