@@ -27,6 +27,10 @@ func _physics_process(delta):
 		life -= 1
 		get_tree().get_root().get_node("stage2Scene").life = life
 		print("ouch")
+	if velocity.length() != 0:
+		if $Timer.time_left <= 0:
+			$walking.play()
+			$Timer.start(0.5)
 
 # get a reference to the sprite at the beginning (instead of using _ready())
 onready var animation = $PlayerAnimatedSprite

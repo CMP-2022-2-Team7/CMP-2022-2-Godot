@@ -446,7 +446,7 @@ autoplay = true
 
 [node name="walking" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 28 )
-volume_db = 7.4
+volume_db = 6.0
 
 [node name="Timer" type="Timer" parent="."]
 one_shot = true

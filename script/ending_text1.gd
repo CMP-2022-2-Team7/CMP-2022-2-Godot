@@ -1,6 +1,6 @@
 extends RichTextLabel
 
-var dialog = ["It was a really scary dream.......","Wait... What time is it?","Oh!!!!!!!!! I'm late!!!!!!!!!!"]
+var dialog = ["It was a really scary dream.......","Wait... What time is it?","(Clock: 12pm)","Oh!!!!!!!!! I'm late!!!!!!!!!!",""]
 var page = 0
 
 func _ready():

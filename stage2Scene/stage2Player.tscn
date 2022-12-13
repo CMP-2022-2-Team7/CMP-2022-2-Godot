@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://object/PlayerKinematicBody.gd" type="Script" id=1]
 [ext_resource path="res://art/Player/blueleftwalk1.png" type="Texture" id=2]
@@ -15,6 +15,7 @@
 [ext_resource path="res://art/Player/bluedown1.png" type="Texture" id=13]
 [ext_resource path="res://art/Player/blueleftwalk2.png" type="Texture" id=14]
 [ext_resource path="res://art/Player/LightSprite.png" type="Texture" id=15]
+[ext_resource path="res://audio/walking.mp3" type="AudioStream" id=16]
 
 [sub_resource type="SpriteFrames" id=2]
 animations = [ {
@@ -65,3 +66,10 @@ scale = Vector2( 0.0660157, 0.120139 )
 texture = ExtResource( 15 )
 texture_scale = 3.0
 energy = 0.7
+
+[node name="walking" type="AudioStreamPlayer" parent="Player"]
+stream = ExtResource( 16 )
+volume_db = 6.0
+
+[node name="Timer" type="Timer" parent="Player"]
+one_shot = true

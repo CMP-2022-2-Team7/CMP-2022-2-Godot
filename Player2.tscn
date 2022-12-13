@@ -67,7 +67,7 @@ energy = 0.7
 
 [node name="walking" type="AudioStreamPlayer" parent="player"]
 stream = ExtResource( 16 )
-volume_db = 7.4
+volume_db = 6.0
 
 [node name="Timer" type="Timer" parent="player"]
 one_shot = true

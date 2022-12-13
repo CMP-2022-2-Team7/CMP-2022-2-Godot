@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://stage2Scene/stage2Maze.tscn" type="PackedScene" id=1]
 [ext_resource path="res://audio/horrorMusic.mp3" type="AudioStream" id=2]
@@ -20,6 +20,22 @@ _data = {
 _data = {
 "points": PoolVector2Array( 0, 0, 0, 0, 1578.95, 1057.89, 0, 0, 0, 0, 157.895, 1047.37, 0, 0, 0, 0, 152.632, 2457.89, 0, 0, 0, 0, 157.895, 1047.37, 0, 0, 0, 0, 1057.89, 1063.16, 0, 0, 0, 0, 1052.63, 2468.42, 0, 0, 0, 0, 1057.89, 1063.16, 0, 0, 0, 0, 1578.95, 1063.16 )
 }
+
+[sub_resource type="GDScript" id=6]
+script/source = "extends Area2D
+
+
+
+
+func _on_Area2D_body_entered(body):
+	print(body.name)
+	if \"TileMap\" in body.name:
+		return
+	get_tree().change_scene(\"res://scene/endingScene.tscn\")
+"
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 13, 13 )
 
 [node name="stage2Scene" type="Node2D"]
 script = ExtResource( 5 )
@@ -57,7 +73,6 @@ rotate = false
 position = Vector2( -1342.11, 715.789 )
 
 [node name="stage2CanvasModulate" type="CanvasModulate" parent="."]
-visible = false
 color = Color( 0.0196078, 0, 0, 1 )
 
 [node name="stage2AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
@@ -66,3 +81,12 @@ volume_db = 3.0
 autoplay = true
 
 [node name="stage2NavigationAgent2D" type="NavigationAgent2D" parent="."]
+
+[node name="Area2D" type="Area2D" parent="."]
+script = SubResource( 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( 648, 608 )
+shape = SubResource( 5 )
+
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_Area2D_body_entered"]
