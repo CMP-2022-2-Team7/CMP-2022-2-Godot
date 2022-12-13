@@ -1,6 +1,7 @@
 [gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://purplewall9piece (2).png" type="Texture" id=1]
+[ext_resource path="res://art/resource/purplewall9piece (2).png" type="Texture" id=1]
+
 
 [sub_resource type="ConvexPolygonShape2D" id=7]
 points = PoolVector2Array( 133, 128, 5, 128, 8, 2, 135, 2 )

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/purplewall9piece (2).png-c50f4184d8cbcc895c7a3c2620c2c0f8.stex"
+path="res://.import/purplewall9piece (2).png-2d65ba253691b26f0bc39dd0a6d743f8.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://purplewall9piece (2).png"
-dest_files=[ "res://.import/purplewall9piece (2).png-c50f4184d8cbcc895c7a3c2620c2c0f8.stex" ]
+source_file="res://art/resource/purplewall9piece (2).png"
+dest_files=[ "res://.import/purplewall9piece (2).png-2d65ba253691b26f0bc39dd0a6d743f8.stex" ]
 
 [params]
 
