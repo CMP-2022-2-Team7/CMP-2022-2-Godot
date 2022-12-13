@@ -2,6 +2,7 @@ extends KinematicBody2D
 
 export (int) var speed = 80
 var velocity = Vector2()
+class_name Player
 
 func get_input():
 	# Set velocity based on the keys pressed
@@ -20,6 +21,12 @@ func get_input():
 func _physics_process(delta):
 	get_input()
 	velocity = move_and_slide(velocity)
+	var collision = move_and_collide(velocity * delta)
+	if collision and collision.collider is Enemy:
+		var life = get_tree().get_root().get_node("stage2Scene").life
+		life -= 1
+		get_tree().get_root().get_node("stage2Scene").life = life
+		print("ouch")
 
 # get a reference to the sprite at the beginning (instead of using _ready())
 onready var animation = $PlayerAnimatedSprite

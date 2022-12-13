@@ -1,7 +1,7 @@
 extends PathFollow2D
 
 export var speed = 80
-onready var animation = $PathEnemyAnimatedSprite
+onready var animation = $PathEnemyKinematicBody2D/PathEnemyAnimatedSprite
 
 # Declare member variables here. Examples:
 # var a = 2
@@ -10,6 +10,7 @@ onready var animation = $PathEnemyAnimatedSprite
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	print("Enemy spawned")
 	animation.play("down")
 
 func _process(delta):
