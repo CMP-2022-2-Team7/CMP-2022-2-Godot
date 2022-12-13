@@ -20,6 +20,10 @@ func get_input():
 func _physics_process(delta):
 	get_input()
 	velocity = move_and_slide(velocity)
+	if velocity.length() != 0:
+		if get_node("/root/World/Timer").time_left <= 0:
+			get_node("/root/World/walking").play()
+			get_node("/root/World/Timer").start(0.5)
 
 # get a reference to the sprite at the beginning (instead of using _ready())
 onready var animation = $PlayerAnimatedSprite
