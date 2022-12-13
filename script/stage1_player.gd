@@ -8,9 +8,11 @@ var move_up = false
 var move_down = false
 
 func _on_left_key_body_entered(body):
+	#if player go into the directional key left, second character go left
 	move_left = true
 	
 func _on_left_key_body_exited(body):
+	#if player go out of the directional key left, second character stop going left
 	move_left = false
 
 func _on_right_key_body_entered(body):
@@ -35,8 +37,10 @@ func get_input():
 	velocity = Vector2()
 	if move_left == true:
 		velocity.x -= 1
+		#the image of key pressed shows
 		get_node("/root/World/main_direction/left_key_active").show()
 	if move_left == false:
+		#the image of key which is not pressed shows
 		get_node("/root/World/main_direction/left_key_active").hide()
 	if move_right == true:
 		velocity.x += 1
@@ -62,6 +66,7 @@ func _physics_process(delta):
 onready var animation = $PlayerAnimatedSprite
 
 func _process(delta):
+	#player animation
 	if move_left == true:
 		animation.play("left")
 	elif move_right == true:

@@ -20,6 +20,7 @@ func get_input():
 func _physics_process(delta):
 	get_input()
 	velocity = move_and_slide(velocity)
+	#player footstep sound
 	if velocity.length() != 0:
 		if get_node("/root/World/Timer").time_left <= 0:
 			get_node("/root/World/walking").play()
