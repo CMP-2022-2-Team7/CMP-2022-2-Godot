@@ -1,8 +1,9 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://art/Enemy/right3.png" type="Texture" id=1]
 [ext_resource path="res://art/Enemy/left1.png" type="Texture" id=2]
 [ext_resource path="res://art/Enemy/left2.png" type="Texture" id=3]
+[ext_resource path="res://stage2Scene/PathEnemyKinematicBody2D.gd" type="Script" id=4]
 [ext_resource path="res://stage2Scene/stage2PathEnemy.gd" type="Script" id=5]
 [ext_resource path="res://audio/ghostScream.mp3" type="AudioStream" id=6]
 [ext_resource path="res://art/Enemy/front3.png" type="Texture" id=7]
@@ -34,17 +35,20 @@ animations = [ {
 scale = Vector2( 4, 4 )
 script = ExtResource( 5 )
 
-[node name="PathEnemyAnimatedSprite" type="AnimatedSprite" parent="."]
-frames = SubResource( 1 )
-animation = "down"
-
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 6 )
 volume_db = -11.044
 autoplay = true
 max_distance = 70.0
 
-[node name="KinematicBody2D" type="KinematicBody2D" parent="."]
+[node name="PathEnemyKinematicBody2D" type="KinematicBody2D" parent="."]
+collision_layer = 2
+collision_mask = 5
+script = ExtResource( 4 )
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="KinematicBody2D"]
-polygon = PoolVector2Array( -7.5, 0, -10, 10, -10, 17.5, 0, 25, 10, 22.5, 12.5, 12.5, 12.5, 2.5, 0, 0 )
+[node name="PathEnemyAnimatedSprite" type="AnimatedSprite" parent="PathEnemyKinematicBody2D"]
+frames = SubResource( 1 )
+animation = "down"
+
+[node name="PathEnemyCollisionPolygon2D" type="CollisionPolygon2D" parent="PathEnemyKinematicBody2D"]
+polygon = PoolVector2Array( -8.5, -4.25, -10, 10, -10, 17.5, 0, 25, 10, 22.5, 12.5, 12.5, 12.5, 2.5, 1, -5.5 )
