@@ -1,5 +1,6 @@
 extends Camera2D
 
+#make player node variable
 var player
 
 func _ready():
