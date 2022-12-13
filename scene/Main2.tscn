@@ -26,7 +26,7 @@
 [ext_resource path="res://art/main_background.png" type="Texture" id=24]
 [ext_resource path="res://art/Keyboard/keyboard_174.png" type="Texture" id=25]
 [ext_resource path="res://script/stage1_player.gd" type="Script" id=26]
-[ext_resource path="res://audio/main.mp3" type="AudioStream" id=27]
+[ext_resource path="res://audio/mainbgm.mp3" type="AudioStream" id=27]
 [ext_resource path="res://audio/walking.mp3" type="AudioStream" id=28]
 
 [sub_resource type="RectangleShape2D" id=1]
