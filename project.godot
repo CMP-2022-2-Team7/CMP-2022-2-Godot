@@ -10,23 +10,17 @@ config_version=4
 
 _global_script_classes=[ {
 "base": "KinematicBody2D",
-<<<<<<< HEAD
-=======
 "class": "Enemy",
 "language": "GDScript",
 "path": "res://stage2Scene/PathEnemyKinematicBody2D.gd"
 }, {
 "base": "KinematicBody2D",
->>>>>>> 3655736 (feat : Add collision detection in player)
 "class": "Player",
 "language": "GDScript",
 "path": "res://object/PlayerKinematicBody.gd"
 } ]
 _global_script_class_icons={
-<<<<<<< HEAD
-=======
 "Enemy": "",
->>>>>>> 3655736 (feat : Add collision detection in player)
 "Player": ""
 }
 
