@@ -11,7 +11,7 @@ onready var animation = $PathEnemyKinematicBody2D/PathEnemyAnimatedSprite
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	print("Enemy spawned")
-	animation.play("down")
+	animation.play("down")	# Play default animation
 
 func _process(delta):
 	set_offset(get_offset() + speed * delta)

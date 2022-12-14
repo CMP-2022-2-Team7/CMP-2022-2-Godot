@@ -13,7 +13,33 @@
 [ext_resource path="res://art/Enemy/front1.png" type="Texture" id=11]
 [ext_resource path="res://art/Enemy/left3.png" type="Texture" id=12]
 [ext_resource path="res://art/Enemy/right2.png" type="Texture" id=13]
-[ext_resource path="res://stage2Scene/stage2Enemy.gd" type="Script" id=14]
+
+[sub_resource type="GDScript" id=2]
+script/source = "extends KinematicBody2D
+
+export (int) var speed = 80
+var velocity = Vector2()
+
+func _physics_process(delta):
+	velocity = move_and_slide(velocity)
+
+# get a reference to the sprite at the beginning (instead of using _ready())
+onready var animation = $EnemyAnimatedSprite
+
+func _process(_delta):
+	if Input.is_action_pressed(\"right\"):
+		# run to the right
+		animation.play(\"right\")
+	elif Input.is_action_pressed(\"left\"):
+		# run to the left
+		animation.play(\"left\")
+	elif Input.is_action_pressed(\"up\"):
+		animation.play(\"back\")
+	elif Input.is_action_pressed(\"down\"):
+		animation.play(\"down\")
+	else:
+		animation.stop()
+"
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -40,7 +66,7 @@ animations = [ {
 
 [node name="EnemyKinematicBody2D" type="KinematicBody2D"]
 scale = Vector2( 0.3, 0.3 )
-script = ExtResource( 14 )
+script = SubResource( 2 )
 
 [node name="EnemyAnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 1 )

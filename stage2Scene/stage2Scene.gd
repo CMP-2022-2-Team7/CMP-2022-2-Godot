@@ -14,4 +14,4 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if(life <= 0):
-		get_tree().change_scene("res://scene/gameover.tscn")
+		get_tree().change_scene("res://scene/gameover.tscn") # If life become 0, move to gameover scene
