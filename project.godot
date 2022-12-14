@@ -26,7 +26,7 @@ _global_script_class_icons={
 
 [application]
 
-config/name="Stage1_maze"
+config/name="DreamInDreamIn"
 run/main_scene="res://scene/Lobby.tscn"
 config/icon="res://scene/icon.png"
 
